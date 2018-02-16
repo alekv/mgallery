@@ -1,0 +1,48 @@
+
+
+/* I'm using CSS3 color names. */
+
+/*
+html { background: DeepSkyBlue; }
+body { background: DeepSkyBlue; }
+h1 { background: DarkSlateBlue; }
+h2 { background: PowderBlue; }
+img { background: MidnightBlue; }
+
+ul#thumbs { background: Aquamarine; }
+ul#thumbs li { background: MediumAquaMarine; }
+
+ul#pages { background: MediumTurquoise; }
+ul#pages li { background: DarkTurquoise; }
+
+div#keywords { background: DarkCyan; }
+div#keywords p { background: LightGreen; }
+ul#keywords { background: MediumSpringGreen; }
+ul#keywords li { background: SpringGreen; }
+
+div#photo { background: LawnGreen; }
+ul#photo-controls { background: GreenYellow; }
+ul#photo-controls li { background: ForestGreen; }
+ul#photo-controls li.break { background: DarkGreen; }
+
+#footer { background: SeaGreen; }
+
+div#notfound { background: MediumSeaGreen; }
+
+#intro { background: DarkGreen; }
+#intro ul { background: LawnGreen; }
+
+#wrapper { background: lime; }
+
+#photo { background: green; }
+*/
+
+
+/* ------ */
+
+/*
+h1, h2, img, ul#pages, #keywords, #photo, #footer, #notfound, #photo-controls
+{
+	display: none;
+}
+*/

@@ -1,0 +1,93 @@
+This document has what each variable stores
+===========================================
+
+manage.php-only vars
+--------------------
+
+lists[]
+	photos[] - list of the photos
+	processed[] - list of processed files if something was interupted, it should be one though
+	thumbs[]
+		album - list of Album thumbnails
+		stream - list of Stream thumbnails
+	missing_thumbs[]
+		stream - list of missing thumbs for the Stream
+		album - list of missing thumbs for the Album
+	total[]
+		missing_thumbs_stream - number of missing thumbs in Stream
+		missing_thumbs_album - number of missing thumbs in Album
+		photos - number of photos
+
+local_path - the local path where the scripts are located, necessary for ImageMagick
+
+passphrase_axiom - used to protect the management operations in manage.php from abuse
+
+
+common vars
+-----------
+
+protocol - wheather you use HTTP or HTTPS, used in redirecting
+path - virtual path in the URL where the website is located, used in redirecting, don't touch this
+host - hostname of the website, used in redirecting, don't touch this
+
+photo_dir - where the photos are located, relative to config.php
+extensions - the extensions your photos have, I'm using this to search photo_dir
+processed - extension the files beeing processed get, temporarily
+
+thumbs[]
+	stream_suffix - suffix added to the Stream thumbnails
+	stream_order - do we see Stream thumbnails from newer to older or vice versa?
+	stream_per_page - how many photos do I present in a Stream page
+	album_suffix - suffix added to the Album thumbnails
+	album_order - do we see Album thumbnails from newer to older or vice versa?
+	album_per_page - how many photos do I present in an Album page
+	
+page[]
+	current - the current page
+	total - total number of pages
+	current_list - photos in this page of thumbnails
+	next - the next page, if there is one
+	prev - the previous page, if there is one
+	around - how many pages to show arround the current/active one
+	edges - how many pages to show at the end and start of paging
+	tolerance - gap between 'edge' and 'around' it'll tolerate before it starts trimming
+
+photo[]
+	id - the name of the photo without extension, 20130203_213527_1251
+	file - the filename of the photo with extension, 20130203_213527_1251.jpg
+	ext - the extension of the photo, .jpg/.jpeg
+	belong - the page this photo belongs
+	next_id - the id of the next photo
+	next_belong - the page the next photo belongs
+	prev_id - the id of the previous photo
+	prev_belong - the page the previous photo belongs
+	location - location of the photo on list_photos[]
+
+iptc[]
+	title - the title I read from IPTC
+	keywords - the keywords I read from IPTC
+	date - the date I read from IPTC
+	time - the time I read from IPTC
+
+temp - stores something to be used temporarily, expendable
+item, item2 - used in for() and foreach() loops, temporary and expendable
+
+list_photos[] - an array that stores all, or some, of the photos in $photo_dir
+
+albums[]
+	prefix - the prefix all album keywords have
+	current - the keyword for the album we're seeing
+	(the rest) - sub-arrays with the suffix of the album keyword and a description shown in HTML
+
+static[] - prerendered HTML
+	begin - how all documents begin
+	end - how all documents end
+	visitor_heading - H1 for visitor website
+	visitor_footer - footer for visitor website
+	manage_heading - H1 for manage.php
+	manage_footer - footer for manage.php
+
+splash_photos[]
+	list - list of random photos to present in the splash page
+	total - how many will the splash photos be
+	

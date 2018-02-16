@@ -1,0 +1,594 @@
+/* There is a small issue: Firefox on Android vanishes the address to save space; when this happens, the document size changes and this causes the photo to quickly change sizes. */
+
+
+/*
+-----------------------------
+basic stuff
+-----------------------------
+*/
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+html
+{
+	height: 100%;
+	width: 100%;
+}
+
+body
+{
+	font-family: sans-serif;
+	margin: auto;
+	width: 98%;
+	height: 99%;
+	margin-top: 1%;
+	max-width: 900px; /* afto prepei ma simfwnei me to megethos mias foto */
+	font-size: 14px;
+	line-height: 1.4em;
+	/* background-color: #D9D9D9; */
+	color: #222222;
+}
+
+a:link, a:visited
+{
+	color: blue;
+}
+
+a:link:hover, a:visited:hover
+{
+	color: purple;
+}
+
+h1
+{
+	font-size: 1.4em;
+	font-weight: normal;
+	border-bottom: 0.05em solid lightgray;
+	padding-bottom: 0.5em;
+	margin-bottom: 2em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+}
+
+h1 a:link
+{
+	text-decoration: none;
+}
+
+h2
+{
+	font-size: 1.3em;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 1.3em;
+	margin-top: 1.3em;
+	font-family: georgia,serif;
+	font-style: italic;
+	font-weight: bold;
+}
+
+code
+{
+	background-color: #eeeeee;
+}
+
+/*
+-----------------------------
+thumbs
+-----------------------------
+*/
+
+/*
+#thumbs
+{
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+}
+*/
+
+#thumbs
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+#thumbs li
+{
+	float: left;
+	display: block;
+	width: 180px;
+	height: 180px;
+	margin: 0.5em;
+	display: table;
+	-overflow: hidden;
+	text-align: center;
+}
+
+
+
+#thumbs li span
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#thumbs li span img
+{
+	display: block;
+	margin: auto;
+}
+
+#thumbs li span a:link img, #thumbs li span a:visited img
+{
+	padding: 3px;
+	border: 2px solid #d1d1d1;
+	-no-box-shadow: 0px 0px 5px #cfcfcf;
+}
+
+#thumbs li span a:link:hover img, #thumbs li span a:visited:hover img
+{
+	border: 2px solid #b7b7b7;
+}
+
+/*
+ul#thumbs
+{
+	list-style-type: none;
+	margin-bottom: 0em;
+	float: left;
+}
+
+ul#thumbs img
+{
+	max-width: 100%;
+	max-height: 98%; 
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+ul#thumbs li
+{
+	float: left;
+	margin: 0.5em;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+}
+
+ul#thums li span
+{
+	display: table;
+
+}
+
+ul#thumbs li span img
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+*/
+
+
+/*
+-----------------------------
+album thumbs
+-----------------------------
+*/
+
+ul#thumbs_a
+{
+	list-style-type: none;
+	margin-bottom: 0em;
+	float: left;
+}
+
+ul#thumbs_a img
+{
+	max-width: 100%;
+	max-height: 98%; 
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+ul#thumbs_a li
+{
+	float: left;
+	margin: 0.5em;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+
+ul#thums_a li span
+{
+	display: table;
+
+}
+
+ul#thumbs_a li span img
+{
+	/* border: 2px solid lightgray; */
+	/* padding: 1px; */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*
+-----------------------------
+pages
+-----------------------------
+*/
+
+ul#pages
+{
+	list-style-type: none;
+	margin-bottom: 4em;
+	float: left;
+	clear: both;
+}
+
+ul#pages li
+{
+	float: left;
+	margin: 0.5em;
+	text-align: center;
+}
+
+
+/*
+-----------------------------
+wrapper
+-----------------------------
+*/
+
+/*
+#wrapper
+{
+	text-align: center;
+	margin-bottom: 3em;
+	margin-top: 3em;
+	padding-top: 0.3em;
+	height: 100%;
+	width: 100%;
+}
+*/
+
+
+#wrapper
+{
+	height: 90%;
+	padding-bottom: 20px;
+	kpadding-left: 0.5em;
+	kpadding-right: 0.5em;
+	margin: auto;
+	max-width: 850px;
+	width: 100%;
+	
+	/*
+	margin-top: 3%;
+	margin-bottom: 1%;
+	*/
+}
+
+
+/*
+-----------------------------
+photo
+-----------------------------
+*/
+
+
+div#photo
+{
+	text-align: center;
+	padding-top: 0.5em;
+	height: 100%;
+}
+
+
+img
+{
+	max-width: 100%;
+	max-height: 85%; /* I can set it to 93% and include the title of the photo */
+	display: block;
+	margin: auto;
+	padding-top: 1em;
+}
+
+
+
+
+/*
+-----------------------------
+photo-controls
+-----------------------------
+*/
+
+ul#photo-controls
+{
+	list-style-type: none;
+	-background: green;
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+ul#photo-controls li
+{
+	display: inline;
+	margin: 0.5em;
+	text-align: center;
+}
+
+ul#photo-controls li.break
+{
+	display: block;
+}
+
+
+/*
+-----------------------------
+footer
+-----------------------------
+*/
+
+#footer
+{
+	clear: both;
+	text-align: center;
+	margin-bottom: 1em;
+	margin-top: 2em;
+	padding-top: 0.5em;
+	border-top: 0.05em solid lightgray;
+}
+
+/*
+-----------------------------
+notfound
+-----------------------------
+*/
+
+div#notfound
+{
+	margin-bottom: 2.5em;
+	text-align: center;
+}
+
+
+/*
+-----------------------------
+keywords
+-----------------------------
+*/
+
+div#keywords
+{
+	text-align: left;
+	font-size: 0.8em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+div#keywords p
+{
+	margin: 0em;
+}
+
+ul#keywords
+{
+	list-style-type: none;
+	background: green;
+	margin-bottom: 4em;
+}
+
+ul#keywords li
+{
+	display: inline;
+	background: lightgreen;
+}
+
+form
+{
+	clear: both;
+}
+
+/*
+fieldset
+{
+	border: 0px;
+	text-align: center;
+}
+
+legend
+{
+	display: none;
+}
+*/
+
+
+.highlight
+{
+	opacity: 0.45;
+}
+
+
+/*
+---------------
+intro
+---------------
+*/
+
+#intro
+{
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+#intro ul
+{
+	list-style-type: none;
+	margin-left: 1em;
+}
+
+#intro p
+{
+	margin-bottom: 1em;
+}
+
+
+/*
+-------------------
+debug
+-------------------
+*/
+
+.debug
+{
+	background: lightgray;
+	font-family: monospace;
+	white-space: pre-wrap;
+	padding: 0.5em;
+	clear: both;
+	border: 1px solid black;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+.debug span
+{
+	background-color: black;
+	color: lightgray;
+}
+
+/*
+-------------------
+manage.php form
+-------------------
+*/
+
+#manage
+{
+	margin-top: 2em;
+}
+
+#manage legend
+{
+	margin-top: 1em;
+	margin-bottom: 0.6em;
+}
+
+#manage fieldset
+{
+	border: 0;
+	margin-bottom: 0.7em;
+}
+
+#manage .nodisplay
+{
+	display: none;
+}
+
+#manage ul
+{
+	list-style-type: none;
+	margin: 0em;
+	margin-left: 1em;
+	padding: 0;
+}
+
+#manage .small
+{
+	font-size: 0.9em;
+	margin: 0em;
+	margin-top: 0.3em;
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+
+#manage input[type='checkbox']
+{
+	margin-right: 0.1em;
+}
+
+
+
+/*
+-------------------
+manage.php
+-------------------
+*/
+
+.error
+{
+	color: red;
+}
+
+/*
+------------------------
+result
+------------------------
+*/
+
+#result
+{
+	background: #dddddd;
+	font-family: monospace;
+	-white-space: pre-wrap;
+	padding: 0.5em;
+	clear: both;
+	border: 1px solid black;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	list-style-type: none;
+	padding-left: 1.4em;
+	text-indent: -1em;
+}
+
+/*
+-----------------
+date
+------------------
+*/
+
+#date
+{
+	text-align: center;
+	margin-bottom: 2em;
+	font-size: 1.2em;
+	font-style: italic;
+	margin-top: -1em;
+}
+
+
+/*
+------------------
+warning
+------------------
+*/
+
+#warning
+{
+	background-color: rgba(192,152,152,0.7);
+	border: 0.3em solid rgba(152,89,89,0.6);
+	margin-bottom: 2em;
+	padding: 0.65em;
+	color: black;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+#warning p
+{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
