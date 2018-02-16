@@ -12,4 +12,4 @@ I'm publishing this in the hopes that it'll be useful to someone, or that someon
 
 I ask for you leniency as I'm not actually a programmer. This is, mostly, a decent hack.
 
-Released under GPL v3. See COPYING.txt.
+Released under GPL v3. See the `LICENSE` file.
